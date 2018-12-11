@@ -1,4 +1,4 @@
-## Meteor Boilerplate
+## Groundwire
 
 ### Developing Locally
 
