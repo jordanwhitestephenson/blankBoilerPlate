@@ -3,7 +3,6 @@ import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import { withStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
-// import theme from '../theme'
 
 const styles = theme => ({
     root: {
@@ -19,6 +18,8 @@ const styles = theme => ({
         color: theme.palette.text.secondary
     }
 })
+//If this was hooked up to a database, we would need to hook into state each time Listings was clicked (so that//
+//we get the most updated results from the database)
 function Listings(props) {
     const { classes } = props
     return (

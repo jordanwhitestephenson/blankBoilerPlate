@@ -1,5 +1,7 @@
 /* eslint-disable import/first */
 /* eslint-disable react/prefer-stateless-function */
+// import { Route, Switch, HashRouter } from 'react-router-dom'
+// import { withRouter } from 'react-router'
 import React from 'react'
 import Listings from './pages/Listings'
 import Drawer from '@material-ui/core/Drawer'
@@ -22,6 +24,7 @@ import { withStyles } from '@material-ui/styles'
 import Rent from './pages/Rent'
 import Services from './pages/Services'
 import Buy from './pages/Buy'
+import PropTypes from 'prop-types'
 
 const drawerWidth = '25vmax'
 
@@ -57,38 +60,38 @@ class MenuNav extends React.Component {
         this.handleClick = this.handleClick.bind(this)
     }
     handleClick = type => {
-        switch (type) {
-            case 'Home':
-                this.setState({
-                    location: 'Home'
-                })
-                break
-            case 'Rent':
-                this.setState({
-                    location: 'Rent'
-                })
-                break
-            case 'Buy':
-                this.setState({
-                    location: 'Buy'
-                })
-                break
-            case 'Services':
-                this.setState({
-                    location: 'Services'
-                })
-                break
-            case 'Profile':
-                this.setState({
-                    location: 'Profile'
-                })
-                break
-        }
+        // switch (type) {
+        //     case 'Home':
+        //         this.setState({
+        //             location: 'Home'
+        //         })
+        //         break
+        //     case 'Rent':
+        //         this.setState({
+        //             location: 'Rent'
+        //         })
+        //         break
+        //     case 'Buy':
+        //         this.setState({
+        //             location: 'Buy'
+        //         })
+        //         break
+        //     case 'Services':
+        //         this.setState({
+        //             location: 'Services'
+        //         })
+        //         break
+        //     case 'Profile':
+        //         this.setState({
+        //             location: 'Profile'
+        //         })
+        //         break
+        // }
     }
 
     render() {
         const { classes } = this.props
-        console.log(this.props)
+
         return (
             <div className={classes.root}>
                 <CssBaseline />
@@ -183,5 +186,8 @@ class MenuNav extends React.Component {
             </div>
         )
     }
+}
+MenuNav.propTypes = {
+    classes: PropTypes.isRequired
 }
 export default withStyles(styles)(MenuNav)
