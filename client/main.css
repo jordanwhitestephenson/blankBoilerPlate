@@ -1,1 +1,14 @@
 /* CSS declarations go here */
+
+.icon {
+    color: #fff !important
+}
+
+.seperator {
+    height: 80px !important;
+}
+
+.MuiAppBar-colorPrimary-7 {
+    background-color: #fafafa !important;
+    z-index: 5000 !important;
+}
